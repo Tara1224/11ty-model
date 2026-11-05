@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Digital Surveillance Resource Guide
+permalink: /guide.html
+---
+
+<main>
+  <h1>Digital Surveillance Resource Guide</h1>
+
+  <p>
+    This guide introduces digital surveillance technology and explores
+    how it affects privacy, law enforcement, and public safety.
+    It is designed for people who are new to the topic.
+  </p>
+
+  {% for section in collections.section | sort(attribute="data.order") %}
+    <section>
+      <h2>{{ section.data.title }}</h2>
+
+      {% if section.data.image %}
+        <figure>
+          <img src="{{ section.data.image }}"
+               alt="{{ section.data.image_alt }}">
+          <figcaption>{{ section.data.image_credit }}</figcaption>
+        </figure>
+      {% endif %}
+
+      {{ section.templateContent | safe }}
+    </section>
+  {% endfor %}
+</main>

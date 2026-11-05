@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "eleventy --serve",
-  "build": "eleventy",
-  "deploy": "gh-pages -d _site"
-},
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "deploy": "gh-pages -d _site"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tara1224/11ty-model.git"
