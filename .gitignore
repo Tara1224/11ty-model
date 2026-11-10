@@ -11,3 +11,6 @@ Thumbs.db
 # Eleventy and Node stuff #
 /node_modules
 .idea/
+
+# Generated Eleventy output
+_site/

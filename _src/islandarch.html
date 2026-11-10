@@ -1,0 +1,36 @@
+---
+title: Island Architecture
+layout: base.njk
+permalink: islandarch.html
+---
+
+<h2>My First Island: Petite-Vue Counter</h2>
+
+<p>Click the button to increase the counter.</p>
+
+<is-land on:visible>
+  <div id="counter" v-scope="{ count: 0 }">
+    <p>Count: <span v-text="count"></span></p>
+    <button @click="count++">Add one</button>
+  </div>
+
+  <template data-island>
+    <script type="module">
+      import { createApp } from './js/petite-vue.js';
+      createApp().mount('#counter');
+    </script>
+  </template>
+</is-land>
+
+<hr>
+
+<h2>My Three.js Scene</h2>
+
+<p>This is where my interactive Three.js scene will appear.</p>
+
+<is-land on:visible>
+  <div id="scene-container"></div>
+  <template data-island>
+    <script type="module" src="./js/threeScene.js"></script>
+  </template>
+</is-land>

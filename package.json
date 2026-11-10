@@ -21,9 +21,16 @@
   },
   "homepage": "https://github.com/Tara1224/11ty-model#readme",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.7"
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/is-land": "^5.3.0",
+    "petite-vue": "^0.4.1",
+    "three": "^0.187.0"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "gh-pages": "^6.3.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
