@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Architecture</title>
+<link rel="stylesheet" href="/css/style.css">
+<script type="module" src="js/is-land.js"></script>
+<script type="module" src="/11ty-model/js/petite-vue.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Island Architecture</h1>
+    </header>
+
+    <main>
+        
+<h2>My First Island: Petite-Vue Counter</h2>
+
+<p>Click the button to increase the counter.</p>
+
+<is-land on:visible>
+  <div id="counter" v-scope="{ count: 0 }">
+    <p>Count: <span v-text="count"></span></p>
+    <button @click="count++">Add one</button>
+  </div>
+
+  <template data-island>
+    <script type="module">
+      import { createApp } from './js/petite-vue.js';
+      createApp().mount('#counter');
+    </script>
+  </template>
+</is-land>
+
+<hr>
+
+<h2>My Three.js Scene</h2>
+
+<p>This is where my interactive Three.js scene will appear.</p>
+
+<is-land on:visible>
+  <div id="scene-container"></div>
+  <template data-island>
+    <script type="module" src="./js/threeScene.js"></script>
+  </template>
+</is-land>
+
+    </main>
+
+    <footer>
+        <p>Created with Eleventy</p>
+    </footer>
+
+</body>
+</html>
